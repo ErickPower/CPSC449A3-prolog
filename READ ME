@@ -1,0 +1,4 @@
+usage (when in directory containing testfiles and main.exe):
+
+./main inputfile.txt outputfile.txt
+
