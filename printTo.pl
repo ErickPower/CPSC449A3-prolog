@@ -6,31 +6,31 @@ myWrite(Code,Data,FileName):- Code=0,
     abort.
 
 myWrite(Code,_,FileName):- Code= -1,
-    myPrint('Error while parsing input file',FileName),nl,
+    myPrint('Error while parsing input file\n',FileName),nl,
     abort.
 
 myWrite(Code,_,FileName):- Code= -2,
-    myPrint('invalid machine/task',FileName),nl,
+    myPrint('invalid machine/task\n',FileName),nl,
     abort.
 
 myWrite(Code,_,FileName):- Code= -3,
-    myPrint('invalid task',FileName),nl,
+    myPrint('invalid task\n',FileName),nl,
     abort.
 
 myWrite(Code,_,FileName):- Code= -4,
-    myPrint('invalid penalty',FileName),nl,
+    myPrint('invalid penalty\n',FileName),nl,
     abort.
 
 myWrite(Code,_,FileName):- Code= -5,
-    myPrint('machine penalty error',FileName),nl,
+    myPrint('machine penalty error\n',FileName),nl,
     abort.
 
 myWrite(Code,_,FileName):- Code= -6,
-    myPrint('partial assignment error',FileName),nl,
+    myPrint('partial assignment error\n',FileName),nl,
     abort.
 
 myWrite(Code,_,FileName):- Code= -7,
-    myPrint('No valid solution possible!',FileName),nl,
+    myPrint('No valid solution possible!\n',FileName),nl,
     abort.
 
 
@@ -63,7 +63,8 @@ dataToText([A,B,C,D,E,F,G,H,PenDub],OutText):-
     atom_concat(Mid6,Gnum,Mid7),
     atom_concat(Mid7,Hnum,Mid8),
     atom_concat(Mid8,'; Quality: ',Mid9),
-    atom_concat(Mid9, PenText, OutText).
+    atom_concat(Mid9,PenText,Mid10),
+    atom_concat(Mid10,'\n',OutText).
     
 
 
