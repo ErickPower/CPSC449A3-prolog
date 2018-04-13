@@ -2,3 +2,6 @@ usage (when in directory containing testfiles and main.exe):
 
 ./main inputfile.txt outputfile.txt
 
+to compile:
+
+gplc main.pl parserHelper.pl..all the .pl.... -o main --global-size 500000 --local-size 500000 --trail-size 500000
